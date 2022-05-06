@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 2</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    let num = parseInt(prompt('Nhập vào số cần tìm: '));
+    let array = [5, 4, 3, 8, 6];
+    function SearchArray(num, array) {
+        this.num = num;
+        for (let i = 0; i < array.length; i++) {
+            if (num == array[i]) {
+                document.write(`Số cần tìm nằm ở vị trí ${i}`);
+                break;
+            } else if (i == array.length - 1){
+                document.write(`Số ${num} không có ở trong mảng`);
+            }
+        }
+    }
+    SearchArray(num, array);
+</script>

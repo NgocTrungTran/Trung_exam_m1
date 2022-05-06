@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 4</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class Staff {
+        constructor(fullname, email) {
+            this.fullname = fullname;
+            this.email = email;
+
+            this.setFullname = function(value) {
+                this.fullname = value;
+            }
+            this.getFullname = function(){
+                return this.fullname;
+            }
+
+            this.setEmail = function(value) {
+                this.email = value;
+            }
+            this.getEmail = function(value) {
+                return this.email;
+            }
+
+            this.toString = function () {
+                return `
+                Fullname is: ${this.fullname}<br>
+                Email is: ${this.email} <br><hr>
+                `;
+            }
+        }
+    }
+
+    const David = new Staff("David", "david@gmail.com");
+    
+    David.setFullname("David Do");
+    David.setEmail("david.do@gmail.com");
+
+    document.write(David.toString());
+    
+    const Staffs = [
+        David,
+        new Staff("Tran Ngoc Trung", "milotran1496@gmail.com"),
+        new Staff("Vo Dai Loc", "LocVo@gmail.com"),
+        new Staff("Le Huu Tien", "Tien@gmail.com"),
+    ];
+
+    for (let i = 0; i < Staffs.length; i++) {
+        document.write(Staffs[i].toString());
+    }
+</script>

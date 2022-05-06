@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu 3</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    function findVowels(str) {
+        let count = 0;
+        let string = str.toLowerCase();
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] == 'a' || string[i] == 'o' || string[i] == 'e' || string[i] == 'u' || string[i] == 'i') {
+                count++;
+            }
+        }
+        if (count == 0) {
+            return document.write('False');
+        }
+        else {
+            return document.write(`Số kí tự nguyên âm có trong chuỗi là: ${count}`);
+        }
+    }
+    let str = prompt('Nhập vào 1 chuỗi bất kì:');
+    findVowels(str);
+</script>
